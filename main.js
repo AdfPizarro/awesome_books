@@ -1,45 +1,28 @@
-let library = new Library();
+const library = new Library();// eslint-disable-line no-undef
+const dom = new Dom(); // eslint-disable-line no-undef
 
-function refresh() {
-  const getBookList = document.getElementById('bookList');
-  getBookList.innerHTML = '';
-
-  bookList=library.getBooks();
-  for (let i = 0; i < bookList.length; i += 1) {
-    const div = document.createElement('div');
-    const title = document.createElement('h3');
-    const author = document.createElement('h3');
-    const button = document.createElement('button');
-
-    title.textContent = bookList[i].title;
-    author.textContent = bookList[i].author;
-    button.textContent = 'Delete';
-    button.setAttribute('id', i);
-    button.setAttribute('class', 'delete');
-
-    div.append(title);
-    div.append(author);
-    div.append(button);
-
-    getBookList.appendChild(div);
-  }
-
+function removeElem() {
   const dltButtons = document.querySelectorAll('.delete');
   dltButtons.forEach((el) => el.addEventListener('click', (event) => { // eslint-disable-line no-unused-vars
     library.removeBook(parseInt(el.id, 10));
+    dom.refresh(); // eslint-disable-line no-use-before-define
   }));
 }
 
-window.onload = function () {
-  refresh();
+function bookList() {
+  return library.getBooks();
+}
+window.onload = () => {
+  dom.refresh(bookList());
+  removeElem();
 };
 
 function addBook() {
   const title = document.getElementById('bookTitle').value;
   const author = document.getElementById('bookAuthor').value;
   library.addBook(title, author);
-  refresh();
+  dom.refresh(bookList());
+  removeElem();
 }
-
 
 document.getElementById('addBook').addEventListener('click', addBook);

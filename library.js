@@ -1,11 +1,4 @@
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
-
-class Library {
+class Library { // eslint-disable-line no-unused-vars
   constructor() {
     this.bookList = [];
     if (localStorage.getItem('bookList') === null) {
@@ -18,17 +11,14 @@ class Library {
   removeBook(index) {
     this.bookList = this.bookList.filter((_, i) => i !== index);
     localStorage.setItem('bookList', JSON.stringify(this.bookList));
-    refresh();// eslint-disable-line no-use-before-define
   }
 
   addBook(title, author) {
-    this.bookList.push(new Book(title, author));
+    this.bookList.push(new Book(title, author)); // eslint-disable-line no-undef
     localStorage.setItem('bookList', JSON.stringify(this.bookList));
-    refresh();
   }
 
-  getBooks(){
+  getBooks() {
     return this.bookList;
   }
-
 }
