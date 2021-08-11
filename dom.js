@@ -3,6 +3,7 @@ class Dom { // eslint-disable-line no-unused-vars
     this.getBookList = document.getElementById('bookList');
   }
 
+
   refresh(bookList) {
     this.getBookList.innerHTML = '';
     for (let i = 0; i < bookList.length; i += 1) {

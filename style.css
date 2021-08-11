@@ -1,3 +1,92 @@
 a {
   text-decoration: none;
 }
+
+h3 {
+  margin: 0;
+}
+
+.title {
+  margin: auto;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  width: 50%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: auto;
+}
+
+form {
+  text-align: center;
+}
+
+#addBook {
+  margin-left: 13em;
+  width: 13%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+.bookList {
+  margin: 10px;
+  border: 5px solid gray;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column-reverse;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bookList:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.bookList:nth-child(odd) {
+  background: #f2f2f2;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.bookInfo {
+  display: flex;
+}
+
+.bookInfo > h3 {
+  text-transform: capitalize;
+}
+
+span {
+  margin: 2px 5px 0 5px;
+}
+
+.delete {
+  margin-left: 13em;
+  width: 13%;
+  background-color: #900;
+  color: white;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+}

@@ -8,6 +8,8 @@ class Library { // eslint-disable-line no-unused-vars
     }
   }
 
+  
+
   removeBook(index) {
     this.bookList = this.bookList.filter((_, i) => i !== index);
     localStorage.setItem('bookList', JSON.stringify(this.bookList));
