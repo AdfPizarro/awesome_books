@@ -85,7 +85,7 @@ input[type=button]:hover {
 }
 
 span {
-  margin: 2px 5px 0px 5px;
+  margin: 2px 5px 0 5px;
 }
 
 .delete {
