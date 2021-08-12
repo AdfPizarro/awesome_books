@@ -51,14 +51,12 @@ h3 {
   padding: 0 15px;
 }
 
-
 input[type=text] {
   width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
-
 
 form,
 .contactTitle {
@@ -116,7 +114,6 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-
   border-bottom: 1px solid gray;
 }
 
