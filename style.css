@@ -6,10 +6,6 @@ h3 {
   margin: 0;
 }
 
-ul {
-  list-style-type: none;
-}
-
 .nav {
   margin: 0 20vw;
   display: flex;
@@ -20,6 +16,7 @@ ul {
 
 .navList{
   display: flex;
+  list-style-type: none;
 }
 
 #navAdd{
@@ -36,8 +33,6 @@ ul {
 .title > h1{
   margin: 0 10px;
   line-height: 44px;
-
-
 }
 
 .navList > li{
@@ -59,7 +54,7 @@ input[type=text] {
   margin: auto;
 }
 
-form {
+form, #Contact-info > h2 {
   text-align: center;
 }
 
@@ -123,4 +118,33 @@ span {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#Contact-info{
+  margin: 50px 20vw;
+  border: 2px solid gray;
+  border-radius: 3px;
+}
+
+#Contact-info > p {
+  margin-left: 10px; 
+  font-family: 'Roboto', sans-serif;
+}
+
+#Contact-info > h2 {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+#Contact-info > ul {
+  font-family: 'Roboto', sans-serif;
+}
+
+.formdiv{
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: auto;
+}
+#bookTitle{
+  margin-bottom: 5px;
 }

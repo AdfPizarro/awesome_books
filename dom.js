@@ -35,19 +35,20 @@ class Dom { // eslint-disable-line no-unused-vars
     }
   }
 
-  show(section){
+  show(section) {
     this.container.innerHTML = '';
     switch (section) {
-      case "navAdd":
-        this.drawForm()
+      case 'navAdd':
+        this.drawForm();
+        break;
+      case 'navContact':
+        this.drawContact();
         break;
       default:
-
     }
-
   }
 
-  drawForm(){
+  drawForm() {
     const div = document.createElement('div');
     const form = document.createElement('form');
     const formDiv = document.createElement('formDiv');
@@ -74,9 +75,37 @@ class Dom { // eslint-disable-line no-unused-vars
     div.append(form);
 
     this.container.append(div);
-
   }
 
+  drawContact(){
+    let div = document.createElement("div");
+    div.id = "Contact-info";
 
+    let h2 = document.createElement("h2");
+    h2.textContent = "Contact Information";
+    div.appendChild(h2);
 
+    let p = document.createElement("p");
+    p.textContent = "Do have any question or your want to say 'Hello'? \n You can reach out to us!";
+
+    let ul = document.createElement('ul')
+    ul.id = "contactInformation";
+
+    let li1 = document.createElement("li");
+    li1.textContent = "Our email: mail@mail.com";
+    ul.appendChild(li1)
+
+    let li2 = document.createElement("li");
+    li2.textContent = "Our phone number: 0043586656585";
+    ul.appendChild(li2);
+
+    let li3 = document.createElement("li");
+    li3.textContent = "Our address: Streetname 22, 76545 City, Country";
+    ul.appendChild(li3);
+
+    div.appendChild(p);
+    div.appendChild(ul);
+
+    this.container.append(div);
+  }
 }
