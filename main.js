@@ -11,7 +11,9 @@ function removeElem() {
 
 window.onload = () => {
   dom.refresh(library.getBooks());
+
   addNavListeners(); // eslint-disable-line no-use-before-define
+
   removeElem();
 };
 
