@@ -7,7 +7,9 @@ class Dom { // eslint-disable-line no-unused-vars
     const getBookList = document.createElement('bookList');
     getBookList.setAttribute('id', 'bookList');
     getBookList.setAttribute('class', 'bookList');
-
+    const pageTitle = document.createElement('h3');
+    pageTitle.textContent = 'All Awesome Books';
+    this.container.appendChild(pageTitle);
     this.container.appendChild(getBookList);
 
     for (let i = 0; i < bookList.length; i += 1) {
@@ -34,7 +36,6 @@ class Dom { // eslint-disable-line no-unused-vars
       div.append(bookInfo);
 
       div.append(button);
-
       getBookList.appendChild(div);
     }
   }

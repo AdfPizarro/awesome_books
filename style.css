@@ -2,8 +2,16 @@ a {
   text-decoration: none;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 h3 {
   margin: 0;
+  text-align: center;
 }
 
 .nav {
@@ -68,13 +76,19 @@ input[type=button]:hover {
 }
 
 .bookList,
-.frame {
+.frame,
+footer {
   margin: 50px 20vw;
   border: 2px solid gray;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+  padding: 5px;
+  margin-bottom: 0;
 }
 
 .bookList {
@@ -144,4 +158,8 @@ span {
 
 #bookTitle {
   margin-bottom: 5px;
+}
+
+.footer > h3 {
+  text-align: left;
 }
