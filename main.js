@@ -9,11 +9,9 @@ function removeElem() {
   }));
 }
 
-function bookList() {
-  return library.getBooks();
-}
 window.onload = () => {
-  dom.refresh(bookList());
+  dom.refresh(library.getBooks());
+  addNavListeners();
   removeElem();
 };
 
@@ -21,8 +19,21 @@ function addBook() {
   const title = document.getElementById('bookTitle').value;
   const author = document.getElementById('bookAuthor').value;
   library.addBook(title, author);
-  dom.refresh(bookList());
+  dom.refresh(library.getBooks());
   removeElem();
 }
 
-document.getElementById('addBook').addEventListener('click', addBook);
+function addNavListeners() {
+  const navButtons = document.querySelectorAll('.navButton');
+  navButtons.forEach((el) => el.addEventListener('click', (event) => { // eslint-disable-line no-unused-vars
+    dom.show(el.id);// eslint-disable-line no-use-before-define
+    switch (el.id) {
+      case 'navAdd':
+        document.getElementById('addBook').addEventListener('click', addBook);
+        break;
+      default:
+
+    }
+
+  }));
+}
