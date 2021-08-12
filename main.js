@@ -11,7 +11,7 @@ function removeElem() {
 
 window.onload = () => {
   dom.refresh(library.getBooks());
-  addNavListeners();
+  addNavListeners(); // eslint-disable-line no-use-before-define
   removeElem();
 };
 
@@ -32,8 +32,6 @@ function addNavListeners() {
         document.getElementById('addBook').addEventListener('click', addBook);
         break;
       default:
-
     }
-
   }));
 }

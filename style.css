@@ -13,30 +13,27 @@ h3 {
   justify-content: space-between;
 }
 
-
-.navList{
+.navList {
   display: flex;
   list-style-type: none;
 }
 
-#navAdd{
+#navAdd {
   border-right: solid 1px gray;
   border-left: solid 1px gray;
 }
 
 .title {
-
-
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-.title > h1{
+.title > h1 {
   margin: 0 10px;
   line-height: 44px;
 }
 
-.navList > li{
-  padding:  0 15px;
+.navList > li {
+  padding: 0 15px;
 }
 
 input[type=text] {
@@ -46,40 +43,42 @@ input[type=text] {
   box-sizing: border-box;
 }
 
-.frame {
-  width: 50%;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin: auto;
-}
-
-form, #Contact-info > h2 {
+form,
+.contactTitle {
   text-align: center;
 }
 
 #addBook {
-  margin-left: 13em;
   width: 13%;
   background-color: #4caf50;
   color: white;
-  padding: 14px 20px;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin: 20px 50px;
+}
+
+.input {
+  margin: 10px 50px;
 }
 
 input[type=button]:hover {
   background-color: #45a049;
 }
 
-.bookList {
+.bookList,
+.frame {
   margin: 50px 20vw;
   border: 2px solid gray;
   border-radius: 3px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   font-family: 'Roboto', sans-serif;
+}
+
+.bookList {
+  flex-direction: column-reverse;
 }
 
 .bookList:nth-child(even) {
@@ -120,18 +119,22 @@ span {
   cursor: pointer;
 }
 
-#Contact-info{
+#Contact-info {
   margin: 50px 20vw;
   border: 2px solid gray;
   border-radius: 3px;
 }
 
 #Contact-info > p {
-  margin-left: 10px; 
+  margin-left: 10px;
   font-family: 'Roboto', sans-serif;
 }
 
-#Contact-info > h2 {
+.frame > h2 {
+  text-align: center;
+}
+
+.contactTitle {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -139,12 +142,6 @@ span {
   font-family: 'Roboto', sans-serif;
 }
 
-.formdiv{
-  display: flex;
-  flex-direction: column;
-  max-width: 50%;
-  margin: auto;
-}
-#bookTitle{
+#bookTitle {
   margin-bottom: 5px;
 }
