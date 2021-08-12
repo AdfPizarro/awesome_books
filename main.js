@@ -9,11 +9,8 @@ function removeElem() {
   }));
 }
 
-function bookList() {
-  return library.getBooks();
-}
 window.onload = () => {
-  dom.refresh(bookList());
+  dom.refresh(library.getBooks());
   removeElem();
 };
 
@@ -21,7 +18,7 @@ function addBook() {
   const title = document.getElementById('bookTitle').value;
   const author = document.getElementById('bookAuthor').value;
   library.addBook(title, author);
-  dom.refresh(bookList());
+  dom.refresh(library.getBooks());
   removeElem();
 }
 

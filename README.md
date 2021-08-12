@@ -28,7 +28,7 @@ To run this project you only need to open the index.html file in a web browser
 - Linkedin: [adrian-flores-pizarro-73b62316a](https://www.linkedin.com/in/adrian-flores-pizarro-73b62316a/)
 
 
-👤  **Mina**
+👤  **Takhmina Makhkamova**
 
 - GitHub: [@Takhmina175](https://github.com/Takhmina175)
 - Twitter: [@Takhmin73630110](https://twitter.com/Takhmin73630110)
