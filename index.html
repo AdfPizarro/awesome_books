@@ -14,23 +14,29 @@
     />
   </head>
   <body>
-    <div class="container">
-      <h1 class="title">Awesome books</h1>
 
-      <div class="bookList" id="bookList"></div>
-      <div class="frame">
-        <form class="">
-          <div>
-          <input type="text" name="" value="" id="bookTitle"  placeholder="Title"/>
-          <input type="text" name="" value="" id="bookAuthor"  placeholder="Author"/>
-          </div><br />
-          <button type="button" name="button" id="addBook">Add</button>
-        </form>
+    <nav class="nav">
+      <div class="title">
+        <h1>Awesome Books</h1>
       </div>
-      <script type="text/javascript" src="book.js"></script>
-      <script type="text/javascript" src="library.js"></script>
-      <script type="text/javascript" src="dom.js"></script>
-      <script type="text/javascript" src="main.js"></script>
-    </div>
-  </body>
+
+      <ul class="navList">
+        <li class='navButton' id="navBookList">Book List</li>
+        <li class='navButton' id="navAdd">Add book</li>
+        <li class='navButton' id="navContact">Contact</li>
+      </ul>
+    </nav>
+    <div id="container" class="container">
+    </div> 
+
+  <footer class="footer">
+    <h3>Copyright ...</h3>
+  </footer>
+
+    <script type="text/javascript" src="book.js"></script>
+    <script type="text/javascript" src="library.js"></script>
+    <script type="text/javascript" src="dom.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body> 
+
 </html>
