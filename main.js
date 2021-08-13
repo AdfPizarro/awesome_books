@@ -5,7 +5,8 @@ function removeElem() {
   const dltButtons = document.querySelectorAll('.delete');
   dltButtons.forEach((el) => el.addEventListener('click', (event) => { // eslint-disable-line no-unused-vars
     library.removeBook(parseInt(el.id, 10));
-    dom.refresh(); // eslint-disable-line no-use-before-define
+    dom.refresh(library.getBooks()); // eslint-disable-line no-use-before-define
+    removeElem();
   }));
 }
 
@@ -33,6 +34,9 @@ function addNavListeners() {
       case 'navAdd':
         document.getElementById('addBook').addEventListener('click', addBook);
         break;
+        case 'navBookList':
+          removeElem();
+          break;
       default:
     }
   }));

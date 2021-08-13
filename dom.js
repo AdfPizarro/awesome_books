@@ -4,6 +4,7 @@ class Dom { // eslint-disable-line no-unused-vars
   }
 
   refresh(bookList) {
+    this.container.innerHTML='';
     const getBookList = document.createElement('bookList');
     getBookList.setAttribute('id', 'bookList');
     getBookList.setAttribute('class', 'bookList');
