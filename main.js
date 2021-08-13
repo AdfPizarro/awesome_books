@@ -34,9 +34,9 @@ function addNavListeners() {
       case 'navAdd':
         document.getElementById('addBook').addEventListener('click', addBook);
         break;
-        case 'navBookList':
-          removeElem();
-          break;
+      case 'navBookList':
+        removeElem();
+        break;
       default:
     }
   }));
